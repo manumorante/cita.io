@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<img class='preview' src="00_Inicio.png">
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	.preview {
+		display: block;
+		margin: 0 auto;
+	}
+</style>
+<script>
+	//const path = "https://raw.githubusercontent.com/manumorante/cita.io/master";
+	const images = [
+		"00_Inicio.png",
+		"01_Contactos.png",
+		"02_Admin.png",
+		"03_Calendario.png",
+		"04_Salir-icnos.png",
+		"05_Calendario-copy.png",
+		"06_Editar-cuenta.png",
+		"07_Privacidad.png"
+	];
+	const preview = document.querySelector(".preview");
+	let i = 1;
+	const next = () => {
+		i = i >= images.length - 1 ? 0 : ++i;
+		//preview.src = path + "/" + images[i];
+    preview.src = images[i];
+	};
+	preview.addEventListener("click", next);
+</script>
+</body>
+</html>
